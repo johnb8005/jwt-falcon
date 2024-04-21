@@ -1,4 +1,6 @@
-**JWT-falcon**
+# JWT-falcon
+
+[![test](https://github.com/johnb8005/jwt-ntru/actions/workflows/test.yml/badge.svg)](https://github.com/johnb8005/jwt-ntru/actions/workflows/test.yml)
 
 A lightweight JavaScript library for generating and verifying JSON Web Tokens (JWT) using the Falcon cryptographic algorithm.
 
