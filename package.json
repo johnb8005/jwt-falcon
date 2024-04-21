@@ -39,5 +39,8 @@
   "homepage": "https://github.com/johnb8005/jwt-ntru#readme",
   "dependencies": {
     "falcon-crypto": "^1.0.6"
+  },
+  "devDependencies": {
+    "jsonwebtoken": "^9.0.2"
   }
 }

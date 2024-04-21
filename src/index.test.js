@@ -6,23 +6,23 @@ import { generateRandomString } from "./utils.js";
 
 const falcon = F.falcon;
 
-test("jwt round trip", async () => {
+test("jwt round trip", async (t) => {
   const keyPair = await falcon.keyPair();
   const message = { message: generateRandomString() };
   let jwt;
 
-  test("sign", async () => {
+  await t.test("sign", async () => {
     jwt = await sign(message, keyPair.privateKey);
 
     assert.deepEqual(typeof jwt, "string");
   });
 
-  test("decode", async () => {
+  await t.test("decode", async () => {
     const decoded = await decode(jwt);
     assert.deepEqual(message, decoded);
   });
 
-  test("verify", async () => {
+  await t.test("verify", async () => {
     const verified = await verify(jwt, keyPair.publicKey);
 
     assert.deepEqual(verified, true);
