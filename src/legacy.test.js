@@ -48,6 +48,15 @@ describe("JWT legacy", () => {
       assert.strictEqual(typeof jwt, "string", "JWT should be a string");
     });
 
+    await t.test("Decode JWT", async () => {
+      const decoded = JWT.decode(jwt);
+      assert.deepStrictEqual(
+        decoded,
+        { ...message, iat: decoded.iat },
+        "Decoded message should match the original"
+      );
+    });
+
     await t.test("Verify JWT", async () => {
       try {
         const verified = JWT.verify(jwt, keyPair.publicKey, {
