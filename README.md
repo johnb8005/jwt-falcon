@@ -5,8 +5,7 @@
 [![NPM package](https://badge.fury.io/js/jwt-falcon.svg)](https://www.npmjs.com/package/jwt-falcon)
 [![NPM package](https://img.shields.io/npm/v/jwt-falcon.svg)](https://www.npmjs.com/package/jwt-falcon)
 
-A lightweight JavaScript library for generating and verifying JSON Web Tokens (JWT) using the Falcon cryptographic algorithm.
-
+A lightweight JavaScript library for generating and verifying JSON Web Tokens (JWT) using the Falcon cryptographic algorithm, a lattice-based signature scheme that is post-quantum (PQ) proof and resistant to attacks from quantum computers.
 **Features**
 
 - Generates JWTs using the Falcon algorithm
