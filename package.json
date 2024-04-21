@@ -3,9 +3,13 @@
   "type": "module",
   "version": "0.0.1",
   "description": "JWT with algorithm: NTRU-Falcon ",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist/*"
+  ],
   "scripts": {
-    "test": "node --test src"
+    "test": "node --test src",
+    "buildPackage": "cp -r src dist"
   },
   "repository": {
     "type": "git",
