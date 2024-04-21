@@ -12,32 +12,28 @@ A lightweight JavaScript library for generating and verifying JSON Web Tokens (J
 - Verifies JWTs using the Falcon algorithm
 - Decodes JWTs to extract the payload
 
-**Usage**
+**Install**
 
-1. Install the package: `npm install jwt-falcon`
-2. Import the library: `import { sign, verify, decode } from 'jwt-falcon';`
-3. Generate a JWT: `const jwt = await sign({ message: 'Hello, World!' }, privateKey);`
-4. Verify a JWT: `const verified = await verify(jwt, publicKey);`
-5. Decode a JWT: `const decoded = await decode(jwt);`
+Install the package: `npm install jwt-falcon`
 
 **Example**
 
 ```javascript
+import Falcon from "falcon";
 import { sign, verify, decode } from "jwt-falcon";
 import { generateRandomString } from "./utils.js";
+
+const falcon = F.falcon;
 
 const keyPair = await falcon.keyPair();
 const message = { message: generateRandomString() };
 
+// sign and get JWT
 const jwt = await sign(message, keyPair.privateKey);
 
-assert.deepEqual(typeof jwt, "string");
-
+// decode and verify
 const decoded = await decode(jwt);
-assert.deepEqual(message, decoded);
 const verified = await verify(jwt, keyPair.publicKey);
-
-assert.deepEqual(verified, true);
 ```
 
 **License**
