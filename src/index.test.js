@@ -6,17 +6,25 @@ import { generateRandomString } from "./utils.js";
 
 const falcon = F.falcon;
 
-test("converts a string to a Uint8Array and back", async () => {
+test("jwt round trip", async () => {
   const keyPair = await falcon.keyPair();
   const message = { message: generateRandomString() };
+  let jwt;
 
-  const jwt = await sign(message, keyPair.privateKey);
+  test("sign", async () => {
+    jwt = await sign(message, keyPair.privateKey);
 
-  assert.deepEqual(typeof jwt, "string");
+    assert.deepEqual(typeof jwt, "string");
+  });
 
-  const decoded = await decode(jwt);
-  assert.deepEqual(message, decoded);
-  const verified = await verify(jwt, keyPair.publicKey);
+  test("decode", async () => {
+    const decoded = await decode(jwt);
+    assert.deepEqual(message, decoded);
+  });
 
-  assert.deepEqual(verified, true);
+  test("verify", async () => {
+    const verified = await verify(jwt, keyPair.publicKey);
+
+    assert.deepEqual(verified, true);
+  });
 });
