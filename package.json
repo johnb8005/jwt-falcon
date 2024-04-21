@@ -18,7 +18,17 @@
   "keywords": [
     "jwt",
     "ntru",
-    "falcon"
+    "falcon",
+    "post-quantum",
+    "lattice-based",
+    "signature",
+    "cryptography",
+    "encryption",
+    "authentication",
+    "authorization",
+    "json web token",
+    "pq-proof",
+    "quantum-resistant"
   ],
   "author": "Johan",
   "license": "MIT",
