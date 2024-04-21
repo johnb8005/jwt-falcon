@@ -1,0 +1,28 @@
+{
+  "name": "jwt-falcon",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "JWT with algorithm: NTRU-Falcon ",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnb8005/jwt-ntru.git"
+  },
+  "keywords": [
+    "jwt",
+    "ntru",
+    "falcon"
+  ],
+  "author": "Johan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnb8005/jwt-ntru/issues"
+  },
+  "homepage": "https://github.com/johnb8005/jwt-ntru#readme",
+  "dependencies": {
+    "falcon-crypto": "^1.0.6"
+  }
+}
