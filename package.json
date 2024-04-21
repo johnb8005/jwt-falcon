@@ -10,7 +10,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "node --test src",
-    "buildPackage": "cp -r src dist"
+    "buildPackage": "cp -r src dist;rm dist/*.test.js"
   },
   "repository": {
     "type": "git",
