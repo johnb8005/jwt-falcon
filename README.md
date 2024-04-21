@@ -19,7 +19,7 @@ Install the package: `npm install jwt-falcon`
 **Example**
 
 ```javascript
-import Falcon from "falcon";
+import Falcon from "falcon-crypto";
 import { sign, verify, decode } from "jwt-falcon";
 import { generateRandomString } from "./utils.js";
 
