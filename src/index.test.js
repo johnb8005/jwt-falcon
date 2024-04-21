@@ -14,6 +14,8 @@ test("jwt round trip", async (t) => {
   await t.test("sign", async () => {
     jwt = await sign(message, keyPair.privateKey);
 
+    //console.log("jwt", jwt);
+
     assert.deepEqual(typeof jwt, "string");
   });
 
