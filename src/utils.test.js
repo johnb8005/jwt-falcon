@@ -6,10 +6,10 @@ import {
   stringToUint8Array,
   uint8ArrayToBase64,
   base64ToUint8Array,
-  generateRandomString,
   base64ToString,
   stringToBase64,
 } from "./utils.js";
+import { generateRandomString } from "./test-utils.js";
 
 describe("converts a string to a Uint8Array and back", () => {
   const helloEncoded = new Uint8Array([104, 101, 108, 108, 111]);

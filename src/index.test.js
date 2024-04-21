@@ -2,7 +2,7 @@ import F from "falcon-crypto";
 import { test } from "node:test";
 import assert from "node:assert";
 import { decode, sign, verify } from "./index.js";
-import { generateRandomString } from "./utils.js";
+import { generateRandomString } from "./test-utils.js";
 
 const falcon = F.falcon;
 

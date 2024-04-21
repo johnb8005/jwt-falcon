@@ -1,5 +1,3 @@
-import crypto from "crypto";
-
 export function uint8ArrayToString(data) {
   const decoder = new TextDecoder("utf-8");
   return decoder.decode(data);
@@ -28,6 +26,3 @@ export const base64ToUint8Array = (base64) => {
 
 export const encodePayload = (payload) =>
   stringToUint8Array(JSON.stringify(payload));
-
-export const generateRandomString = (length = 12) =>
-  crypto.randomBytes(length).toString("hex");
