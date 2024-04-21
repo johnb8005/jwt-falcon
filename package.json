@@ -1,7 +1,7 @@
 {
   "name": "jwt-falcon",
   "type": "module",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "A lightweight JavaScript library for generating and verifying JSON Web Tokens (JWT) using the Falcon cryptographic algorithm, a lattice-based signature scheme that is post-quantum (PQ) proof and resistant to attacks from quantum computers.",
   "main": "dist/index.js",
   "files": [
